@@ -46,6 +46,12 @@ def exponent(base, power)
   return result
 end
 
+# Take the square root of a given square
+def square_root(square)
+  square_root = Math.sqrt(square)
+  return square_root
+end
+
 # ------------------------------------------------------------------------------
 # Main code
 # ------------------------------------------------------------------------------
@@ -61,7 +67,8 @@ puts "Hello #{name}.\n\n"
 # Ask the user which operation they want to perform.
 puts "Which operation do you wish to perform?\n"
 puts "1. Addition\t2. Subtraction\t3. Multiplication\n"
-puts "4. Division\t5. Modulo\t6. Exponent"
+puts "4. Division\t5. Modulo\t6. Exponent\n"
+puts "7. Square root"
 # Retrieve user input
 operation = gets
 # Chomps off the line break and converts type from 'string' to 'int'.
@@ -147,6 +154,15 @@ when 6 # Exponent
   # Calculate the result and print to shell
   answer = exponent(x, y)
   puts "The answer to #{x}^#{y} is #{answer}.\n"
+when 7 # Square root
+  puts "The square root of a given square is the number that, when raised to the power of 2, will equal the square. Formatted as \"√x\".\n"
+  # Retrieve input for x
+  puts "Please input for x."
+  x = gets
+  x = x.chomp.to_i
+  # Calculate the result and print to shell
+  answer = square_root(x)
+  puts "The answer to √#{x} is #{answer}.\n"
 else # When the value of 'operation' doesn't match anything
   puts "That doesn't point to any operation... T_T\n"
 end
