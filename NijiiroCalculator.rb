@@ -40,6 +40,12 @@ def modulo(dividend, divisor)
   return remainder
 end
 
+# Raise a number to the power of another number and return the result
+def exponent(base, power)
+  result = base ** power
+  return result
+end
+
 # ------------------------------------------------------------------------------
 # Main code
 # ------------------------------------------------------------------------------
@@ -55,7 +61,7 @@ puts "Hello #{name}.\n\n"
 # Ask the user which operation they want to perform.
 puts "Which operation do you wish to perform?\n"
 puts "1. Addition\t2. Subtraction\t3. Multiplication\n"
-puts "4. Division\t5. Modulo"
+puts "4. Division\t5. Modulo\t6. Exponent"
 # Retrieve user input
 operation = gets
 # Chomps off the line break and converts type from 'string' to 'int'.
@@ -128,6 +134,19 @@ when 5 # Modulus
   # Calculate the result and print to shell
   answer = modulo(x, y)
   puts "The answer to #{x} mod #{y} is #{answer}.\n"
+when 6 # Exponent
+  puts "Exponent take a number (the base) and multiply it by a specific number of times (the power). Formatted in ASCII as \"x ^ y\".\n"
+  # Retrieve input for x
+  puts "Please enter for x."
+  x = gets
+  x = x.chomp.to_i
+  # Retrieve input for y
+  puts "Please enter for y"
+  y = gets
+  y = y.chomp.to_i
+  # Calculate the result and print to shell
+  answer = exponent(x, y)
+  puts "The answer to #{x}^#{y} is #{answer}.\n"
 else # When the value of 'operation' doesn't match anything
   puts "That doesn't point to any operation... T_T\n"
 end
