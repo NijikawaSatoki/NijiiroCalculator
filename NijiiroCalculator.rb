@@ -30,13 +30,23 @@ end
 
 # Divide two numbers
 def divide(dividend, divisor)
-  quotient = dividend / divisor
+  # Check if attempting to divide by 0
+  if divisor == 0
+    puts "Error! You cannot divide by 0!\n"
+  else
+    quotient = dividend / divisor
+  end
   return quotient
 end
 
 # Divide two numbers and take the remainder
 def modulo(dividend, divisor)
-  remainder = dividend % divisor
+  # Check if attemtping to take remainder of "x / 0"
+  if divisor == 0
+    puts "Error! You cannot divide by 0!\n"
+  else
+    remainder = dividend % divisor
+  end
   return remainder
 end
 
