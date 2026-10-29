@@ -1,3 +1,9 @@
+# =====================================================
+# Niji's Math module
+# -----------------------------------------------------
+# A module containing some maths methods.
+# =====================================================
+
 module NijiMath
   # Add two numbers
   def add(addend_x, addend_y)
@@ -34,6 +40,7 @@ module NijiMath
     end
     return remainder
   end
+  
   # Raise a number to the power of another number and return the result
   def exponent(base, power)
     result = base ** power
@@ -45,3 +52,5 @@ module NijiMath
     return square_root
   end
 end
+
+# >>>>>> END OF FILE <<<<<< #
